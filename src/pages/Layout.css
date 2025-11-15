@@ -1,0 +1,364 @@
+/* ===========================
+   GLOBAL LAYOUT WRAPPER
+=========================== */
+.layout-container {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ===========================
+   HEADER BASE
+=========================== */
+.layout-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 20px 0;
+  transition: 0.4s;
+  background: transparent;
+}
+
+.layout-header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.layout-header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+.layout-logo img {
+  height: 64px;
+  width: auto;
+  transition: 0.3s;
+}
+
+.layout-logo:hover img {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   DESKTOP NAV (visible > 992px)
+=========================== */
+.layout-nav-desktop {
+  display: flex;
+  gap: 6px;
+}
+
+.layout-nav-link {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+/* Active page */
+.layout-nav-link.active {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Light mode (when NOT scrolled) */
+.layout-nav-link.light {
+  color: white;
+}
+.layout-nav-link.light:hover {
+  background: rgba(255,255,255,0.2);
+  color: #dc2626;
+}
+
+/* Dark mode (when scrolled) */
+.layout-nav-link.dark {
+  color: #475569;
+}
+.layout-nav-link.dark:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===========================
+   CALL BUTTON (Desktop only)
+=========================== */
+.layout-call-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(to right, #dc2626, #b91c1c);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  transition: 0.25s;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.layout-call-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 5px 20px rgba(220,38,38,0.4);
+}
+
+.icon-sm {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===========================
+   MOBILE MENU TOGGLE (Hamburger)
+=========================== */
+.layout-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.toggle-line {
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: #1e293b;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+/* Open animation */
+.open-1 {
+  transform: rotate(45deg) translateY(8px);
+}
+.open-2 {
+  opacity: 0;
+}
+.open-3 {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ===========================
+   MOBILE MENU BOX
+=========================== */
+.layout-mobile-menu {
+  margin-top: 8px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.layout-mobile-item {
+  padding: 18px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s;
+}
+
+.layout-mobile-item:hover {
+  background: #f1f5f9;
+}
+
+.layout-mobile-item.active {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.layout-mobile-call {
+  padding: 18px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: linear-gradient(to right, #dc2626, #b91c1c);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+.layout-main {
+  padding-top: 90px; /* space under fixed header */
+}
+
+/* ===========================
+   WHATSAPP FLOATING BUTTON
+=========================== */
+.layout-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 40;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.layout-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.layout-whatsapp img {
+  width: 36px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.layout-footer {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: white;
+  margin-top: 80px;
+  padding: 60px 20px 30px;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* COMPANY AREA */
+.footer-company img.footer-logo {
+  height: 80px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 10px;
+}
+
+.footer-desc {
+  color: #cbd5e1;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.footer-socials a:hover {
+  background: #dc2626;
+}
+
+/* QUICK LINKS + SERVICES */
+.footer-links h3,
+.footer-services h3,
+.footer-contact h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-links ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-services li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* CONTACT DETAILS */
+.footer-contact .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: #e2e8f0;
+}
+
+.footer-contact a {
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: white;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* ===========================
+   RESPONSIVE STYLES
+=========================== */
+
+/* Hide desktop nav on mobile */
+@media (max-width: 992px) {
+  .layout-nav-desktop,
+  .layout-call-btn {
+    display: none;
+  }
+  .layout-mobile-toggle {
+    display: block;
+  }
+}
+
+/* Adjust padding for small screens */
+@media (max-width: 600px) {
+  .layout-header-inner {
+    padding: 0 10px;
+  }
+  .layout-logo img {
+    height: 56px;
+  }
+}

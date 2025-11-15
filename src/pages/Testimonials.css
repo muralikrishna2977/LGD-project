@@ -1,0 +1,134 @@
+/* MAIN CONTAINER */
+.test-container {
+  background: white;
+}
+
+/* HERO */
+.test-hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.test-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 58, 138, 0.9),
+    rgba(127, 29, 29, 0.9)
+  );
+}
+
+.test-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.test-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.test-hero-subtitle {
+  font-size: 20px;
+  color: #dbeafe;
+}
+
+/* SECTION */
+.test-section {
+  padding: 80px 16px;
+}
+
+.test-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.highlight {
+  color: #dc2626;
+}
+
+/* GRID */
+.test-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* CARD */
+.test-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.test-card:hover {
+  box-shadow: 0 10px 36px rgba(0,0,0,0.18);
+  transform: translateY(-4px);
+}
+
+/* AVATAR */
+.test-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 999px;
+  border: 4px solid #dc2626;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+/* TEXT */
+.test-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.test-role {
+  color: #64748b;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* STARS */
+.test-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.test-star {
+  width: 20px;
+  height: 20px;
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+/* REVIEW TEXT */
+.test-text {
+  color: #475569;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-top: 10px;
+}

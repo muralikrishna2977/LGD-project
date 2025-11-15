@@ -1,0 +1,269 @@
+/* MAIN CONTAINER */
+.fl-container {
+  background: white;
+}
+
+/* HERO */
+.fl-hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fl-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(30, 58, 138, 0.9), rgba(127, 29, 29, 0.9));
+}
+
+.fl-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.fl-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.fl-hero-subtitle {
+  font-size: 20px;
+  color: #dbeafe;
+}
+
+/* INTRO SECTION */
+.fl-intro {
+  padding: 80px 16px;
+}
+
+.fl-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.fl-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #dc2626;
+}
+
+.fl-text {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.fl-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+/* OFFER SECTION */
+.fl-offer {
+  background: #f8fafc;
+  padding: 80px 16px;
+}
+
+.fl-offer-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.fl-offer-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.fl-offer-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.fl-offer-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.fl-offer-icon {
+  width: 50px;
+  height: 50px;
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.fl-offer-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.fl-offer-card-desc {
+  color: #64748b;
+}
+
+/* PROCESS SECTION */
+.fl-process {
+  padding: 80px 16px;
+  background: linear-gradient(to right, #dc2626, #1e3a8a);
+  color: white;
+}
+
+.fl-process-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.fl-process-sub {
+  text-align: center;
+  color: #dbeafe;
+  margin-bottom: 40px;
+}
+
+.fl-process-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.fl-process-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.fl-process-step {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.2);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+.fl-process-text {
+  color: #e0e7ff;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* WHY CHOOSE US */
+.fl-why {
+  padding: 80px 16px;
+}
+
+.fl-why-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.fl-why-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.fl-why-card {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.fl-why-icon {
+  width: 32px;
+  height: 32px;
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.fl-why-text {
+  color: #334155;
+  font-weight: 500;
+}
+
+/* CTA */
+.fl-cta {
+  background: #f1f5f9;
+  padding: 80px 16px;
+  text-align: center;
+}
+
+.fl-cta-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.fl-cta-sub {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.fl-cta-btn {
+  background: #dc2626;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.25s;
+}
+
+.fl-cta-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+}
