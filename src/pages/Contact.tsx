@@ -35,7 +35,7 @@ export default function Contact() {
 
             <div className="contact-detail">
               <Phone className="contact-icon" />
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919876543210">+91 7742341555</a>
             </div>
 
             <div className="contact-detail">

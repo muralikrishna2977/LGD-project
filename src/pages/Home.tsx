@@ -3,6 +3,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ArrowRight, MapPin, CheckCircle, Phone } from "lucide-react";
+import Logo from "../assets/logo.png";
 
 export default function Home() {
   return (
@@ -17,18 +18,29 @@ export default function Home() {
 
         <div className="hero-overlay"></div>
 
-        <div className="hero-content">
-          <h1 className="hero-title">Lakshmi Gayathri Developers</h1>
-          <p className="hero-subtitle">
-            Trusted Land Development & Honest Investment Solutions
-          </p>
+        <div className="homePage-imageAndContent">
+          {/* <div className="logoEncloser">
+          </div> */}
+            <img
+              className="homePageLogo"
+              // height="200px"
+              width="400px"
+              src={Logo}
+              alt="Lakshmi Gayathri Developers"
+            />
+          <div className="hero-content">
+            <h1 className="hero-title">Lakshmi Gayathri Developers</h1>
+            <p className="hero-subtitle">
+              Trusted Land Development & Honest Investment Solutions
+            </p>
 
-          <Link
-            to={createPageUrl("Ventures")}
-            className="hero-btn"
-          >
-            Explore Ventures <ArrowRight className="icon-sm" />
-          </Link>
+            <Link
+              to={createPageUrl("Ventures")}
+              className="hero-btn"
+            >
+              Explore Ventures <ArrowRight className="icon-sm" />
+            </Link>
+          </div>
         </div>
       </section>
 

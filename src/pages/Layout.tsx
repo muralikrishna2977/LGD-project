@@ -16,6 +16,7 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react";
+import Logo from "../assets/logo.png";
 
 export default function Layout({ children, currentPageName }) {
   const [scrolled, setScrolled] = useState(false);
@@ -115,7 +116,7 @@ export default function Layout({ children, currentPageName }) {
 
       {/* WHATSAPP FLOAT */}
       <a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/7742341555"
         target="_blank"
         rel="noopener noreferrer"
         className="layout-whatsapp"
@@ -133,7 +134,7 @@ export default function Layout({ children, currentPageName }) {
           {/* COMPANY */}
           <div className="footer-company">
             <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f3915b5ea5ff737855c9b3/41ac67442_image.png"
+              src={Logo}
               className="footer-logo"
             />
 
@@ -184,7 +185,7 @@ export default function Layout({ children, currentPageName }) {
 
             <div className="contact-item">
               <Phone className="icon-sm" />
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919876543210">+91 7742341555</a>
             </div>
 
             <div className="contact-item">

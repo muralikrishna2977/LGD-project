@@ -250,7 +250,7 @@
 /* COMPANY AREA */
 .footer-company img.footer-logo {
   height: 80px;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
   margin-bottom: 10px;
 }
 
